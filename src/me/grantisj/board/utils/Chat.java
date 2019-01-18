@@ -1,7 +1,5 @@
 package me.grantisj.board.utils;
 
-import me.grantisj.board.apis.Placeholders;
-
 public class Chat {
 
     public static String replacePlaceholders(String text) {

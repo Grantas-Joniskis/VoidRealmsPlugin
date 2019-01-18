@@ -1,6 +1,5 @@
 package me.grantisj.board;
 
-import me.grantisj.board.apis.Placeholders;
 import me.grantisj.board.utils.Chat;
 import org.bukkit.plugin.java.JavaPlugin;
 
