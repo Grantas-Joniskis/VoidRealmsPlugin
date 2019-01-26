@@ -1,0 +1,24 @@
+world: world
+title:
+- '&5&lVoid &d&lRealms'
+- '&b&lVoid &9&lRealms'
+title-delay: 20
+title-animation: true
+content:
+  '1':
+    lines:
+    - '&3players: %current-online%/%max-online%'
+  '2':
+    lines:
+    - '%time% remaining'
+  '3':
+    lines:
+    - '%players%'
+    - 'asdasd'
+  '7':
+    lines:
+    - 'message1'
+    - 'message2'
+    - '%players%'
+line-animation: true
+line-delay: 20

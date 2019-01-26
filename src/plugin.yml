@@ -2,3 +2,6 @@ name: Board
 version: 1.0
 main: me.grantisj.board.Main
 description: Info scoreboard.
+commands:
+  boardreload:
+    description: Reloads the config file and the scoreboard.
