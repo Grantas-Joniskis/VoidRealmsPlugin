@@ -1,4 +1,4 @@
-name: Board
+name: CraftBoard
 version: 1.0
 main: me.grantisj.board.Main
 description: Info scoreboard.

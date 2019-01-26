@@ -1,7 +1,7 @@
 package me.grantisj.board.core.placeholder;
 
-import me.grantisj.board.core.board.Board;
-import me.grantisj.board.apis.placeholder.Placeholder;
+import me.grantisj.board.apis.Placeholder;
+import me.grantisj.board.core.board.CraftBoard;
 import org.bukkit.Bukkit;
 
 import java.util.HashMap;
@@ -14,7 +14,7 @@ public class PlaceholderManager implements Placeholder {
     private static Map<String, String> placeholders = new HashMap<>();
 
     @Override
-    public String replacePlaceholder(String text, Board.BoardScore boardScore) {
+    public String replacePlaceholder(String text, CraftBoard.BoardScore boardScore) {
         for(String placeholder : placeholders.keySet()) {
             switch (placeholder) {
                 case "%players%":
@@ -22,15 +22,15 @@ public class PlaceholderManager implements Placeholder {
                         String players[] = getValue(placeholder).split(" ");
                         int lines = (15 - (boardScore.getValue() - 1));
                         for (int i = 0; i < players.length; i++) {
-                            if (!boardScore.getBoard().lineExists(lines)) boardScore.getBoard().setLine(lines, players[i]);
+                            if (!boardScore.getCraftBoard().lineExists(lines)) boardScore.getCraftBoard().setLine(lines, players[i]);
                             else {
-                                Board.BoardScore line = boardScore.getBoard().getLine(lines);
+                                CraftBoard.BoardScore line = boardScore.getCraftBoard().getLine(lines);
                                if (!line.getDisplayText().contains(placeholder)) line.clearTexts();
-                               boardScore.getBoard().setLine(lines, players[i]);
+                               boardScore.getCraftBoard().setLine(lines, players[i]);
                             }
                             lines++;
                             if (i == 3) break;
-                            if(boardScore.getBoard().scores.size() == 15) break;
+                            if(boardScore.getCraftBoard().scores.size() == 15) break;
                         }
                     }
                     break;

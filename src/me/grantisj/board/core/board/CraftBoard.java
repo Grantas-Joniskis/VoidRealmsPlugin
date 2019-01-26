@@ -1,5 +1,6 @@
 package me.grantisj.board.core.board;
 
+import me.grantisj.board.apis.Board;
 import me.grantisj.board.core.placeholder.PlaceholderManager;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -13,7 +14,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Board {
+public class CraftBoard implements Board {
 
     private Objective objective;
     private Scoreboard scoreboard;
@@ -25,7 +26,7 @@ public class Board {
     public List<BoardScore> scores;
 
 
-    public Board(String title) {
+    public CraftBoard(String title) {
         titles = new ArrayList<>();
         scores = new ArrayList<>();
         titles.add(title);
@@ -120,7 +121,7 @@ public class Board {
 
     private void createScore(int line, String text) {
         BoardScore score = new BoardScore(line, text);
-        score.setBoard(this);
+        score.setCraftBoard(this);
         scores.add(score);
         displayScore(score);
     }
@@ -150,7 +151,7 @@ public class Board {
     public static class BoardScore {
         private int value;
         private String displayText;
-        private Board board;
+        private CraftBoard craftBoard;
         private List<String> texts;
         private int currextText;
 
@@ -178,12 +179,12 @@ public class Board {
             this.value = value;
         }
 
-        private void setBoard(Board board) {
-            this.board = board;
+        private void setCraftBoard(CraftBoard craftBoard) {
+            this.craftBoard = craftBoard;
         }
 
-        public Board getBoard() {
-            return board;
+        public CraftBoard getCraftBoard() {
+            return craftBoard;
         }
 
         public void addText(String text) {
@@ -195,7 +196,7 @@ public class Board {
         }
 
         private void setNextScore() {
-            if(board.lineAnimation) {
+            if(craftBoard.lineAnimation) {
                 if (texts.size() != 0) {
                     if (currextText == texts.size() - 1) {
                         currextText = 0;

@@ -68,29 +68,29 @@ public class BoardManager {
     }
 
     public void displayBoard(Player player) {
-        Board board = new Board(lines.get(0).get(0));
-        for(int i = 1; i < lines.get(0).size(); i++) board.addTitle(lines.get(0).get(i));
+        CraftBoard craftBoard = new CraftBoard(lines.get(0).get(0));
+        for(int i = 1; i < lines.get(0).size(); i++) craftBoard.addTitle(lines.get(0).get(i));
         if(lines.size() <= 16) {
             for(int i = 1; i < lines.size(); i++) {
-                List<String> lines = this.lines.get(board.scores.size()+1);
-                board.setLine(board.scores.size()+1, lines.get(0));
-                board.update();
+                List<String> lines = this.lines.get(craftBoard.scores.size()+1);
+                craftBoard.setLine(craftBoard.scores.size()+1, lines.get(0));
+                craftBoard.update();
                 for(String line : lines) {
-                    board.addText(board.scores.size(), line);
+                    craftBoard.addText(craftBoard.scores.size(), line);
                 }
-                i = board.scores.size();
+                i = craftBoard.scores.size();
                 if(i == 15) break;
             }
         }
-        board.display(player);
+        craftBoard.display(player);
         new BukkitRunnable() {
             @Override
-            public void run() { board.update(); }
+            public void run() { craftBoard.update(); }
         }.runTaskTimer(Main.plugin, 0, lineDelay);
         new BukkitRunnable() {
             @Override
             public void run() {
-                board.updateTitle();
+                craftBoard.updateTitle();
             }
         }.runTaskTimer(Main.plugin, 0, titleDelay);
     }

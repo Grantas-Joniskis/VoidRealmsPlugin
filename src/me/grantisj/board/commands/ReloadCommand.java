@@ -16,7 +16,7 @@ public class ReloadCommand implements CommandExecutor {
         BoardManager.bm.clearLines();
         BoardManager.bm.loadBoards();
         for(Player player : Bukkit.getServer().getOnlinePlayers()) BoardManager.bm.displayBoard(player);
-        sender.sendMessage("Board has been reloaded!");
+        sender.sendMessage("CraftBoard has been reloaded!");
         return true;
     }
 }
