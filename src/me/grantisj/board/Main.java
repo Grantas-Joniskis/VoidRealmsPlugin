@@ -1,7 +1,7 @@
 package me.grantisj.board;
 
-import me.grantisj.board.apis.board.BoardManager;
-import me.grantisj.board.apis.placeholder.PlaceholderManager;
+import me.grantisj.board.core.board.BoardManager;
+import me.grantisj.board.core.placeholder.PlaceholderManager;
 import me.grantisj.board.commands.ReloadCommand;
 import me.grantisj.board.listeners.PlayerJoinListener;
 import me.grantisj.board.utils.ConfigFile;

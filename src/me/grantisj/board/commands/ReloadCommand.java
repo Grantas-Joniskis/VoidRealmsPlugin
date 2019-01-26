@@ -1,7 +1,7 @@
 package me.grantisj.board.commands;
 
 import me.grantisj.board.Main;
-import me.grantisj.board.apis.board.BoardManager;
+import me.grantisj.board.core.board.BoardManager;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

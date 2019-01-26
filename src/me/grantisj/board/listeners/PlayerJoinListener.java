@@ -1,7 +1,7 @@
 package me.grantisj.board.listeners;
 
-import me.grantisj.board.apis.board.BoardManager;
-import me.grantisj.board.apis.placeholder.PlaceholderManager;
+import me.grantisj.board.core.board.BoardManager;
+import me.grantisj.board.core.placeholder.PlaceholderManager;
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

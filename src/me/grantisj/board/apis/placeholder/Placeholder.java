@@ -1,6 +1,6 @@
 package me.grantisj.board.apis.placeholder;
 
-import me.grantisj.board.apis.board.Board;
+import me.grantisj.board.core.board.Board;
 
 public interface Placeholder {
 

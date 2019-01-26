@@ -1,6 +1,7 @@
-package me.grantisj.board.apis.placeholder;
+package me.grantisj.board.core.placeholder;
 
-import me.grantisj.board.apis.board.Board;
+import me.grantisj.board.core.board.Board;
+import me.grantisj.board.apis.placeholder.Placeholder;
 import org.bukkit.Bukkit;
 
 import java.util.HashMap;

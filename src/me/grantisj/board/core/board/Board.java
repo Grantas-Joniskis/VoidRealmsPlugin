@@ -1,6 +1,6 @@
-package me.grantisj.board.apis.board;
+package me.grantisj.board.core.board;
 
-import me.grantisj.board.apis.placeholder.PlaceholderManager;
+import me.grantisj.board.core.placeholder.PlaceholderManager;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;

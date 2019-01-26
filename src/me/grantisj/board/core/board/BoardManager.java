@@ -1,4 +1,4 @@
-package me.grantisj.board.apis.board;
+package me.grantisj.board.core.board;
 
 import me.grantisj.board.Main;
 import me.grantisj.board.utils.ConfigFile;
