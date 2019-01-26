@@ -10,7 +10,7 @@ public class APIDocument implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
         // Creates a new instance of Board with title "Test Board"
-        Board board = new Board("&5&lTest Board");
+        CraftBoard board = new CraftBoard("&5&lTest Board");
         //We can add more title lines if we want to be our title animated.
         board.addTitle("&6&lTest Board");
         // Lets create the first line of the board.
